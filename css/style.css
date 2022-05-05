@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgba(150, 150, 150, 0.527);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.head-ul{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 3px 0;
+    direction: rtl;
+}
+.head-ul li{
+    flex-shrink: 0;
+    padding: 10px 10pt;
+    list-style: none;
+}
+a{
+    font-size: clamp(19px,2vw,22px);
+    text-decoration: none;
+    color: rgb(121, 121, 121);
+}
+a:hover{
+    text-decoration: underline;
+}
+/* part2 */
+.head-part2{
+    direction: rtl;
+    width: 100%;
+    background-color: rgb(1, 128, 231);
+}
+.head-cont{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.head-left-item{
+    width: 250px;
+    display: flex;
+}
+.head-logo img{
+    width: 50%;
+}
+.head-left-a{
+    color: white;
+    align-self: center;
+}
+.head-left-item-btn{
+    margin-right: auto;
+    align-self: center;
+}
+.head-left-item-btn button{
+    font-size: clamp(16px,2vw,18px);
+    cursor: pointer;
+    padding: 2px;
+}
+.arbic{
+    background-color: rgb(13, 134, 2);
+    color: #ffffff;
+    border: 1px solid wheat;
+}
+/* عن تغير حجم الشاشه */
+@media screen and (max-width:600px){
+    .sec-all{
+        flex-direction: column;/* جعل عنصر الفلاكس باتاجه العمودي*/
+    }
+    .sec-left-add-aver{
+        direction: rtl;/* تغير اتاجه زر اضافة اعلان الى اتجاه اليمين مع نقص حجم الشاشه */
+    }
+}
+/* section */
+.sec-all{
+    display: flex;
+    margin-left: 5%;
+}
+.sec-left{
+    min-width: 70%;
+}
+.sec-right{
+    min-width: 30%;
+    text-align: center;
+}
+.sec-left-add-aver{/* زراضافة اعلانات */
+    padding: 2% 0;
+    margin: 0 10px;
+}
+.left-add-aver-btn{
+    box-shadow: inset 0 -2px hsl(0deg 0% 100% / 10%), inset 0 -3px rgb(0 0 0 / 10%), 0 1px rgb(0 0 0 / 5%);
+    font-size: clamp(20px,2vw,25px);
+    padding: 1% 1%;
+    color: rgb(65, 145, 0);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+.left-add-aver-btn:hover{
+    text-decoration: underline;
+    color: rgb(112, 112, 112);
+}
+.sec-left-mean1{/* <!-- المحتوى الرائيسي للعناصر --> */
+    display: flex;
+    overflow-x: auto;
+    direction: rtl;
+    margin: auto;
+}
+.sec-left-mean1 figure{
+    padding: 10px 5px;
+    margin: 2px;
+    flex-shrink: 0;
+    text-align: center;
+    border-radius: 10px;
+}
+[src="images/New folder/car.svg"]{
+    margin-top: 8px;
+    width: 33px;
+}
+[src="images/New folder/house.svg"]{
+    margin-top: -2px;
+    width: 30px;
+}
+[src="images/New folder/seat.svg"]{
+    margin-top: -2px;
+}
+[src="images/New folder/shirt.svg"]{
+    margin-top: -2px;
+}
+.sec-left-mean1 figcaption{
+    font-size: 20px;
+    color: rgb(121, 121, 121);
+}
+.sec-left-mean1 figure:hover{
+    background-color: rgba(0, 0, 255, 0.438);
+}
+.sec-left-mean1 figure:hover figcaption{
+    color: rgb(3, 63, 99);
+}
+.sec-left-mean2{/* <!-- المحتوى الفرعي للعناصر --> */
+    display: flex;
+    padding: 10px;
+    overflow-x: auto;
+    direction: rtl;
+}
+.sec-left-mean2 a{
+    margin-left: 2%;
+    border: 1px solid rgb(190, 190, 190);
+    flex-shrink: 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+.select1{/* <!-- المحتوى الفرعي للعناصر --> */
+    direction: rtl;
+    margin: 0 10px;
+    padding: 3% 0;
+}
+.select1-all-rigon ,.select-cars{
+    padding: 1%;
+    color: rgb(58, 92, 131);
+    border: 1px solid rgba(58, 92, 131, 0.418);
+    font-size: clamp(16px,2vw,18px);
+    border-radius: 10px;
+}
+.cont-left-adver{/* <!-- منطقه محتوى الاعلانات  --> */
+    width: 100%;
+    background-color: rgba(158, 158, 158, 0.192);
+    height: 100px;
+}
+.cont-left-adver-item{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: 15px;
+}
+.left-adver-item-1{
+    width: 72%;
+}
+.left-adver-item-1-1{
+    height: 70%;
+    display: flex;
+    direction: rtl;
+    cursor: pointer;
+}
+.left-adver-item-object{
+    direction: rtl;
+    text-overflow: ellipsis;/* عند وصول الكتابه الى الحد 72% تتحول الى نقاط */
+    overflow: hidden;/* ما بعد الحد يتم اخفائه */
+    white-space: nowrap;/* لايسمح للكتابه ان يحدث لها راب */
+}
+.left-adver-item-object a{
+color: rgb(65, 145, 0);
+}
+.left-adver-item-1-1 i,span{
+    font-size: 17px;
+}
+.div1{
+    width: 50%;
+    height: 35%;
+    align-self: flex-end;
+    color: rgb(100, 98, 98);
+}
+.div2{
+    width: 50%;
+    height: 80%;
+    align-self: flex-end;
+    color: rgb(100, 98, 98);
+}
+.divv{
+    line-height: 30px;
+}
+.spanad:hover{
+    text-decoration: underline;
+}
+/* قسم اليمين */
+.sec-cont-right-cont{ /* قسم اليمين المحتوى الاول */
+    width: 90%;
+    margin: auto;
+}
+.right-cont-line{/* الخط الموجود اسفل */
+   width: 90%;
+   margin: auto;
+   display: block;
+   height: 3px;
+   background-color: rgb(221, 221, 224);
+}
+.right-cont-sajal{
+   line-height: 50px;
+}
+.right-selector-selector{/* <!-- المحتوى اختيار موديلات السيارات --> */
+   color: rgb(105, 105, 105);
+   font-size: 20px;
+   direction: rtl;
+   margin-top: 10px;
+   border-radius: 10px;
+   width: 70%;
+   text-align: center;
+   padding: 10px;
+}
+.right-search,.sec-left-mean1 figure,.advertisement-btn,.left-adver-item-object h3,.header2-left-btn button{
+   cursor: pointer;/* عند وضع المؤشر على النعصر تتغير بشكل يد*/
+}
+.right-search{
+   background-color: blue;
+   padding: 10px;
+   color: #ffffff;
+   width: 65%;
+   margin-top: 10px;
+   border-radius: 10px;
+   display: inline-block;
+}
+.imag-logo-car{
+   display: flex;
+   margin: auto;
+   width: 80%;
+   flex-flow: row wrap;
+   justify-content: center;
+}
+.logo-right{
+   margin-right: 10px;
+}
+.logo1{
+   width: 80px;
+   height: 80px;
+   object-fit: contain;
+}
